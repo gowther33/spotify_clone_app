@@ -1,5 +1,6 @@
 package com.example.spotify_clone.exoplayer
 
+import android.net.Uri
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaBrowserCompat.MediaItem.FLAG_PLAYABLE
 import android.support.v4.media.MediaDescriptionCompat
@@ -26,7 +27,7 @@ class FirebaseMusicSource @Inject constructor(
         songs = allSongs.map{song ->
             MediaMetadataCompat.Builder()
                 .putString(METADATA_KEY_ARTIST, song.subtitle)
-                .putString(METADATA_KEY_MEDIA_ID, song.mediaid)
+                .putString(METADATA_KEY_MEDIA_ID, song.mediaId)
                 .putString(METADATA_KEY_TITLE, song.title)
                 .putString(METADATA_KEY_DISPLAY_ICON_URI, song.imageUrl)
                 .putString(METADATA_KEY_MEDIA_URI, song.songUrl)
@@ -38,9 +39,9 @@ class FirebaseMusicSource @Inject constructor(
         state = State.STATE_INITIALIZED
     }
 
-    fun asMediaSource(dataSourceFactory: DefaultDataSourceFactory):ConcatenatingMediaSource{
+    fun asMediaSource(dataSourceFactory: DefaultDataSourceFactory): ConcatenatingMediaSource {
         val concatenatingMediaSource = ConcatenatingMediaSource()
-        songs.forEach{song->
+        songs.forEach { song ->
             val mediaSource = ProgressiveMediaSource.Factory(dataSourceFactory)
                 .createMediaSource(song.getString(METADATA_KEY_MEDIA_URI).toUri())
             concatenatingMediaSource.addMediaSource(mediaSource)

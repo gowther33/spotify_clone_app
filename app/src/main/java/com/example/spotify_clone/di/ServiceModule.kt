@@ -2,6 +2,7 @@ package com.example.spotify_clone.di
 
 import android.content.Context
 import com.example.spotify_clone.data.remote.MusicDatabase
+import com.example.spotify_clone.exoplayer.FirebaseMusicSource
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -22,6 +23,7 @@ object ServiceModule {
     @ServiceScoped
     @Provides
     fun provideMusicDatabase() = MusicDatabase()
+
 
     @ServiceScoped
     @Provides
