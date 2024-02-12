@@ -1,4 +1,4 @@
-package com.example.spotify_clone.other
+package com.example.spotify_clone.utils
 
 object Constants {
     // Collection name of firestore database

@@ -1,7 +1,7 @@
 package com.example.spotify_clone.data.remote
 
 import com.example.spotify_clone.data.entities.Song
-import com.example.spotify_clone.other.Constants.SONG_COLLECTION
+import com.example.spotify_clone.utils.Constants.SONG_COLLECTION
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 

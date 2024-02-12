@@ -10,8 +10,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.example.spotify_clone.R
-import com.example.spotify_clone.other.Constants.NOTIFICATION_CHANNEL_ID
-import com.example.spotify_clone.other.Constants.NOTIFICATION_ID
+import com.example.spotify_clone.utils.Constants.NOTIFICATION_CHANNEL_ID
+import com.example.spotify_clone.utils.Constants.NOTIFICATION_ID
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerNotificationManager
 
