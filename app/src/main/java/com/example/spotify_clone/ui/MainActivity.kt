@@ -1,4 +1,4 @@
-package com.example.spotify_clone
+package com.example.spotify_clone.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var glide:RequestManager
-    lateinit var binding: ActivityMainBinding
-
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
